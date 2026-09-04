@@ -6,20 +6,20 @@
 
 **[Watch the two-minute demo →](https://youtu.be/eHUrM30v2EA)**
 
-Elfu is a personal product and engineering experiment I built for my four-year-old. A child starts with a topic such as trains, butterflies, dinosaurs, or rain. Elfu, a baby-elephant guide, then offers three short paths: **Story**, **Draw**, or **Learn**.
+Elfu is a personal product & engineering experiment I built for my 4-year-old. A child picks a topic (Eg: butterflies) and Elfu, a baby-elephant guide, offers three short paths: **Story**, **Draw**, or **Learn**.
 
-I wanted to see whether a young child's first experience of AI could feel more like active creation and guided curiosity than another stream of passive content.
+I wanted to see whether a young child's first experience of AI could feel more like active creation and guided curiosity than another stream of passive content (Yes, Peppa Pig, I'm talking about you!).
 
 ## Why this exists
 
-For many parents, YouTube and Netflix are the easiest dependable options when a young child wants screen time. They work, but the child is mostly consuming. I could not find many substitutes that were active, curiosity-fostering, easy for a pre-reader to use, and safe enough for a parent to trust.
+For many parents, YouTube kids & Netflix are the easiest dependable options when a young child wants screen time. While there's some good content out there (Eg: Stillwater), the child is mostly consuming passively. I could not find many substitutes that were active, curiosity-fostering, easy for a pre-reader to use, and safe enough for a parent to trust.
 
 Elfu is an attempt at that missing interaction model. It is a bounded environment designed around how young children actually communicate, rather than a general chatbot with a child-friendly skin:
 
 - voice before typing;
 - large choices rather than open-ended navigation;
 - short creative loops rather than an infinite feed;
-- a warm guide without "best friend" framing;
+- a warm guide without "best friend"/ dependency framing;
 - visible endings and parent handoff rather than engagement at any cost.
 
 The bar I use is modest: **a better ten minutes than passive video: active, creative, finite, and parent-visible.**
@@ -28,10 +28,11 @@ The bar I use is modest: **a better ten minutes than passive video: active, crea
 
 ![Elfu offers Story, Draw, and Learn for the child's chosen topic](media/robo-kid-session.jpg)
 
-1. The child says what they are curious about.
-2. Elfu reflects the topic and offers **Story**, **Draw**, or **Learn**.
-3. The child chooses with voice or a large on-screen card.
+1. The child picks a topic they are curious about.
+2. Elfu offers **Story**, **Draw**, or **Learn** choices.
+3. The child picks an activity.
 4. Elfu runs a short activity with limited steps and simple choices.
+5. The child can then pick another activity for that same topic getting a cohesive experience (for example, a train story followed by the option to now draw a train)
 5. The session winds down and hands control back to a parent.
 
 The current build is intentionally narrow. Story creates a short illustrated sequence. Draw gives one step at a time. Learn pairs a small fact with an action or question. The objective is not to keep the child talking indefinitely; it is to help them ask, choose, imagine, revise, and make something.
@@ -92,7 +93,7 @@ For each run, the harness records:
 - deterministic usability monitors;
 - an optional model-based audiovisual evaluation.
 
-The evaluator is tested too. Seeded defects such as repeated fallbacks, topic drift, duplicate audio, injected latency, and audio/visual desynchronization are used to check which failure classes the judge can reliably identify. A judge result is not treated as ground truth simply because it came from another model.
+The evaluator is tested too. Seeded defects such as repeated fallbacks, topic drift, duplicate audio, injected latency, and audio/visual desynchronization are used to check which failure classes the judge can reliably identify.
 
 Read more: **[Robo-Kid evaluation harness](docs/robo-kid-evaluation-harness.md)**.
 
@@ -106,15 +107,10 @@ Read more: **[Robo-Kid evaluation harness](docs/robo-kid-evaluation-harness.md)*
 | [Sanitized sample run](artifacts/sample-run/README.md) | A cooperative story scenario, aggregate timing, completion, and recording-health evidence. |
 | [Evaluator calibration](artifacts/evaluator-calibration.md) | A historical seeded-defect exercise, including blind spots and confounded evidence. |
 
-## Current scope
-
-Elfu is a tinker project, not a released product. The current evidence comes from use with one young child, automated tests, and simulated voice sessions. The prototype still has important open problems, including conversational latency, broader scenario coverage, evaluator reliability, parent controls, privacy design, and testing across children, accents, ages, and environments.
-
-The repository contains documentation and selected sanitized artifacts. The production application, complete prompts and policies, raw child data, and harness source are intentionally not included.
 
 ## Future direction
 
-Two directions matter if the project continues:
+Two things that I'm excited about:
 
 - **Privacy-preserving memory:** enough continuity to remember a child's interests, creations, and progression without building an opaque archive of intimate conversations. Memory should be minimal, parent-controlled, inspectable, and erasable.
 - **Personalized, age-guided progression:** adapt the interaction model as the child grows. At ages three to four that means voice, cards, pretend play, and drawing prompts. Later it can include phonics, sequencing, projects, typing, coding, research, and critical AI collaboration.
@@ -123,4 +119,4 @@ The long-term idea is an AI-native first-computer environment where children lea
 
 ---
 
-Built by [Aravind](https://github.com/aravind10x) as a personal exploration in child-computer interaction, governed agents, and evaluation for live voice systems.
+Built as a personal exploration in child-computer interaction, governed agents, and evaluation for live voice systems.
