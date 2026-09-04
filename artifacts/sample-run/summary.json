@@ -1,0 +1,32 @@
+{
+  "schema": "elfu-public-run-summary/v1",
+  "runId": "2026-08-29-train-story-happy-01",
+  "live": true,
+  "durationMs": 150876,
+  "elfuTurnCount": 12,
+  "roboKidTurnCount": 4,
+  "exchangeCount": 4,
+  "audioClockVersion": 2,
+  "latencies": [
+    {
+      "turnId": "turn_2",
+      "childToFirstScheduledAudioMs": 1902.375
+    },
+    {
+      "turnId": "turn_3",
+      "childToFirstScheduledAudioMs": 1399.375
+    },
+    {
+      "turnId": "turn_4",
+      "childToFirstScheduledAudioMs": 2302.375
+    },
+    {
+      "turnId": "turn_12",
+      "childToFirstScheduledAudioMs": 2162.958251953125
+    }
+  ],
+  "endReason": "session_end_scene",
+  "completed": true,
+  "lastScene": "parent_handoff"
+}
+

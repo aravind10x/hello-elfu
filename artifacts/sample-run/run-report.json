@@ -1,0 +1,16 @@
+{
+  "schema": "elfu-public-run-report/v1",
+  "runId": "2026-08-29-train-story-happy-01",
+  "health": {
+    "schema": "elfu-instrument-health/v1",
+    "usable": true,
+    "passedChecks": 11,
+    "failedChecks": 0
+  },
+  "monitor": {
+    "schema": "elfu-monitor-report/v1",
+    "findings": []
+  },
+  "findings": []
+}
+

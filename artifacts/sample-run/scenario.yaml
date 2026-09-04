@@ -1,0 +1,12 @@
+id: train-story-happy-01
+topic: trains
+activity: story
+temperament:
+  attention: high
+  interruptions: none
+  off_script: low
+seed: 1
+notes: >-
+  Cooperative simulated child. Says the topic when asked, chooses Story,
+  participates in the story beats, and says goodbye at the end.
+

@@ -1,0 +1,73 @@
+{
+  "schema": "elfu-instrument-health/v1",
+  "usable": true,
+  "checks": [
+    {
+      "id": "artifacts.parse",
+      "pass": true,
+      "severity": "error",
+      "detail": "artifacts parsed"
+    },
+    {
+      "id": "events.monotonic",
+      "pass": true,
+      "severity": "error",
+      "detail": "event timestamps are finite and monotonic"
+    },
+    {
+      "id": "audio.clock_version",
+      "pass": true,
+      "severity": "error",
+      "detail": "live runs identify separate approval and audio-scheduling clocks"
+    },
+    {
+      "id": "latency.complete",
+      "pass": true,
+      "severity": "error",
+      "detail": "each completed exchange contains a valid response-latency measurement"
+    },
+    {
+      "id": "latency.measurement_version",
+      "pass": true,
+      "severity": "error",
+      "detail": "completed exchanges use the clock-appropriate latency measurement"
+    },
+    {
+      "id": "latency.non_negative",
+      "pass": true,
+      "severity": "error",
+      "detail": "scheduled-audio latency is non-negative"
+    },
+    {
+      "id": "audio.first_render_corroborates",
+      "pass": true,
+      "severity": "error",
+      "detail": "captured first-render audio corroborates its scheduled start"
+    },
+    {
+      "id": "recording.drift",
+      "pass": true,
+      "severity": "error",
+      "detail": "absolute audio/video residual drift is at most 100 ms"
+    },
+    {
+      "id": "recording.duration",
+      "pass": true,
+      "severity": "error",
+      "detail": "recording and session durations agree within the configured tolerance"
+    },
+    {
+      "id": "audio.elfu_present",
+      "pass": true,
+      "severity": "error",
+      "detail": "spoken turns contain Elfu audio"
+    },
+    {
+      "id": "counts.reconcile",
+      "pass": true,
+      "severity": "warning",
+      "detail": "summary and event counts reconcile"
+    }
+  ]
+}
+
