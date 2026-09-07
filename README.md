@@ -8,7 +8,7 @@
 
 Elfu is a personal product & engineering experiment I built for my 4-year-old. A child picks a topic (Eg: butterflies) and Elfu, a baby-elephant guide, offers three short paths: **Story**, **Draw**, or **Learn**.
 
-I wanted to see whether a young child's first experience of AI could feel more like active creation and guided curiosity than another stream of passive content (Yes, Peppa Pig, I'm talking about you!).
+I wanted to see whether a child's screen-time could feel more like active creation instead of another passive binge session on Netflix or YouTube Kids (Yes, Peppa Pig, I'm talking about you!).
 
 ## Why this exists
 
